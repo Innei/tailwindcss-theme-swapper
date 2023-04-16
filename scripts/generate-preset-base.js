@@ -94,6 +94,6 @@ const config = [
 
 require('fs').writeFileSync(
   path.resolve(__dirname, '../presets/built-in.js'),
-  JSON.stringify(config, null, 2),
+  `module.exports = ${JSON.stringify(config, null, 2)}`,
   'utf-8',
 )
